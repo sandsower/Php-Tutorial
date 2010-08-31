@@ -2,15 +2,15 @@
 $filas=$_GET['filas'];
 $columnas=$_GET['columnas'];
 $minas=$_GET['minas'];
-    
+	
 if($minas<($filas*$columnas)){
     //Inicializamos el arreglo
-        for($x=0;$x<$filas;$x++){
+    for($x=0;$x<$filas;$x++){
             for($y=0;$y<$columnas;$y++){
                 $arreglo[$x][$y]=0;
             }
         }
-
+    //Pintamos las minas
     while($z<$minas){
              $random1=rand(0,$filas-1);
              $random2=rand(0,$columnas-1);
@@ -20,9 +20,9 @@ if($minas<($filas*$columnas)){
               $z=$z+1;
           }
         }
-
     echo "<fieldset>";
     echo "<legend>Resultado</legend>";
+    //Imprimimos el arreglo
     for($x=0;$x<$filas;$x++){
             for($y=0;$y<$columnas;$y++){
                 echo $arreglo[$x][$y]. " - ";
@@ -30,9 +30,9 @@ if($minas<($filas*$columnas)){
             echo"<br/>";
         }
     echo "</fieldset>"    ;
-
-
 }
+    
+
         ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
