@@ -2,16 +2,15 @@
 $filas=$_GET['filas'];
 $columnas=$_GET['columnas'];
 $minas=$_GET['minas'];
-
-function inicializarArreglo(){
+    
+if($minas<($filas*$columnas)){
     //Inicializamos el arreglo
         for($x=0;$x<$filas;$x++){
             for($y=0;$y<$columnas;$y++){
                 $arreglo[$x][$y]=0;
             }
         }
-}
-function ponerMinas(){
+
     while($z<$minas){
              $random1=rand(0,$filas-1);
              $random2=rand(0,$columnas-1);
@@ -21,8 +20,7 @@ function ponerMinas(){
               $z=$z+1;
           }
         }
-}
-function imprimirArreglo(){
+
     echo "<fieldset>";
     echo "<legend>Resultado</legend>";
     for($x=0;$x<$filas;$x++){
@@ -32,12 +30,8 @@ function imprimirArreglo(){
             echo"<br/>";
         }
     echo "</fieldset>"    ;
-}
 
-if($minas<($filas*$columnas)){
-          inicializarArreglo();
-          ponerMinas();
-          imprimirArreglo();      
+
 }
         ?>
 
