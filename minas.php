@@ -2,7 +2,7 @@
 $filas=$_GET['filas'];
 $columnas=$_GET['columnas'];
 $minas=$_GET['minas'];
-	
+//Prueba para el push
 if($minas<($filas*$columnas)){
     //Inicializamos el arreglo
     for($x=0;$x<$filas;$x++){
@@ -10,6 +10,7 @@ if($minas<($filas*$columnas)){
                 $arreglo[$x][$y]=0;
             }
         }
+	echo "Parte de prueba";
     //Pintamos las minas
     while($z<$minas){
              $random1=rand(0,$filas-1);
@@ -31,7 +32,7 @@ if($minas<($filas*$columnas)){
         }
     echo "</fieldset>"    ;
 }
-    
+
 
         ?>
 
